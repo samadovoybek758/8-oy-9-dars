@@ -190,7 +190,7 @@ function Main() {
               data.length > 0 && data.map(function (value) {
                 return ( 
                   <div>
-                    <LineGraph data={value.lineChart.data} ></LineGraph>
+                    <LineGraph data={value.lineChart.data} labels={value.lineChart.labels} ></LineGraph>
             <span className='text-[#0956AF] block mb-2 mt-6 text-5xl font-semibold'>{value.overall}</span>
             <div className='w-[333px]  h-[45px] bg-green-700 rounded-lg'></div>
                   </div>

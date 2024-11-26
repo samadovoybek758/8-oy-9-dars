@@ -5,10 +5,12 @@ import { FC } from "react";
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler);
 
 interface  Numbers {
-    data: number[]
+    data: number[],
+    labels: string[]
+    
 }
 
-const LineGraph: FC<Numbers> = ({data}) => {
+const LineGraph: FC<Numbers> = ({data,labels}) => {
   const sampleData = data;
     
   const canvasData = {
@@ -32,7 +34,7 @@ const LineGraph: FC<Numbers> = ({data}) => {
         // grid: {
         //   display: false,
         // },
-        labels: [12.06,18.06,'03.07',13.07,14.07,20.07,24.07],
+        labels: labels,
         ticks: {
           color: "#333333",
           font: {
