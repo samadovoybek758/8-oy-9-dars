@@ -8,9 +8,13 @@ function Main() {
 
   type NumArray = number[];
   type Label = string[];
+  interface Type3 {
+    data:NumArray,
+    labels: Label
+  }
 
   interface Type {
-    lineChart: NumArray | Label;
+    lineChart: Type3;
     overall: string;
     semicharts: type[];
     thanOthers: number;
